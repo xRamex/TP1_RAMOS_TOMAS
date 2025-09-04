@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TP1_RAMOS_TOMAS</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #mensaje { color: red; margin-top: 8px; }
+
+    /* Recuadro de vista previa */
+    #preview {
+      margin-top: 15px;
+      width: 320px;
+      height: 240px;
+      border: 2px dashed #555;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #f9f9f9;
+      text-align: center;
+      user-select: none;
+    }
+    #preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    /* Feedback visual cuando se arrastra encima */
+    #preview.dragover {
+      border-color: #0a84ff;
+      background: #eef6ff;
+    }
+  </style>
+</head>
+<body>
+  <h2>Subir Imagen con File API</h2>
+
+  <input type="file" id="inputFile" accept="image/*" />
+  <p id="mensaje"></p>
+
+  <!-- Zona de drop -->
+  <div id="preview">
+    <span>Aquí se verá la imagen arrastrada</span>
+  </div>
+
+  <script src="logica.js"></script>
+</body>
+</html>
